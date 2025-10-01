@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>COFFE WHISPER</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <style>
+    :root {
+      --bg: #efe6df;
+      --coffee-1: #4b2e2a;
+      --coffee-2: #6f3f36;
+      --coffee-3: #b98f7a;
+      --accent: #f4e9e3;
+      --radius: 14px;
+      --shadow: 0 8px 30px rgba(75,46,42,0.18), inset 0 1px 0 rgba(255,255,255,0.06);
+      font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin:0; padding:0;}
+    body { 
+      background: linear-gradient(180deg, var(--bg), #f7ece6); 
+      color: var(--coffee-1); 
+      display: flex; flex-direction: column; 
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 32px;
+      background: linear-gradient(90deg, var(--coffee-3), var(--coffee-2));
+      color: var(--accent);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    header .logo { font-weight: 700; font-size: 24px; }
+    
+    /* Footer */
+    .main-footer {
+      background: linear-gradient(90deg, var(--coffee-2), var(--coffee-3));
+      color: var(--accent);
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: auto;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+    }
+
+    main {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    main h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: var(--coffee-2);
+    }
+
+    iframe {
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin: 20px auto;
+      display: block;
+    }
+
+    #contacto {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    #contacto h3 {
+      font-size: 24px;
+      margin-bottom: 16px;
+      color: var(--coffee-2);
+      text-align: center;
+    }
+
+    #contacto form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    #contacto input, #contacto textarea {
+      padding: 12px;
+      border-radius: var(--radius);
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    #contacto button {
+      background: var(--coffee-1);
+      color: var(--accent);
+      border: none;
+      padding: 12px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-weight: 700;
+      transition: background 0.3s;
+    }
+    #contacto button:hover {
+      background: var(--coffee-2);
+    }
+
+    .datos-contacto {
+      margin-top: 20px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .datos-contacto i {
+      margin-right: 8px;
+      color: var(--coffee-2);
+    }
+
+    .boton-inicio {
+      display: inline-block;
+      margin: 20px auto;
+      background: var(--coffee-3);
+      color: var(--coffee-1);
+      padding: 10px 16px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 700;
+      transition: background 0.3s;
+    }
+
+    .boton-inicio:hover {
+      background: var(--coffee-1);
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">COFFE WHISPER</div>
+  </header>
+
+  <main>
+    <h2>Información de contacto</h2>
+  </main>
+
+  <!-- Mapa -->
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!3m2!1ses-419!2smx!4v1759335533994!5m2!1ses-419!2smx!6m8!1m7!1sKH0oHcxhZY4vDl6lsaLQ8Q!2m2!1d19.41169902608284!2d-99.32048052557049!3f143.8490467849229!4f-7.37793364524282!5f0.7820865974627469" 
+    width="100%" height="400" allowfullscreen="" 
+    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+    
+  <!-- Sección contacto -->
+  <section id="contacto">
+    <h3>Contáctanos</h3>
+    <p style="text-align:center;">Déjanos tus datos y nosotros nos comunicamos contigo</p>
+    <form>
+      <input type="text" placeholder="Nombre" required />
+      <input type="email" placeholder="Email" required />
+      <input type="text" placeholder="Teléfono" required />
+      <input type="text" placeholder="Asunto" required />
+      <textarea rows="4" placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div class="datos-contacto">
+      <p><i class="fas fa-map-marker-alt"></i> Dirección: De las Flores 19, 52773 Magdalena Chichicaspa, Méx.</p>
+      <p><i class="fas fa-phone"></i> Teléfonos: <br> 55 87 99 58 40<br> 
+      55 61 47 56 65<br>
+      55 61 31 42 35</p>
+    </div>
+  </section>
+
+  <div style="text-align: center;">
+    <a href="index.html" class="boton-inicio">Regresar al inicio</a>
+  </div>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 COFFE WHISPER. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
