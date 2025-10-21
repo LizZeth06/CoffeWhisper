@@ -155,14 +155,15 @@
   <section id="contacto">
     <h3>Contáctanos</h3>
     <p style="text-align:center;">Déjanos tus datos y nosotros nos comunicamos contigo</p>
-    <form>
-      <input type="text" placeholder="Nombre" required />
-      <input type="email" placeholder="Email" required />
-      <input type="text" placeholder="Teléfono" required />
-      <input type="text" placeholder="Asunto" required />
-      <textarea rows="4" placeholder="Mensaje" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+    <form action="insertar_contacto.php" method="POST">
+  <input type="text" name="nombre" placeholder="Nombre" required />
+  <input type="email" name="email" placeholder="Email" required />
+  <input type="text" name="telefono" placeholder="Teléfono" required />
+  <input type="text" name="asunto" placeholder="Asunto" required />
+  <textarea name="mensaje" rows="4" placeholder="Mensaje" required></textarea>
+  <button type="submit">Enviar</button>
+</form>
+
 
     <div class="datos-contacto">
       <p><i class="fas fa-map-marker-alt"></i> Dirección: De las Flores 19, 52773 Magdalena Chichicaspa, Méx.</p>
@@ -173,12 +174,16 @@
   </section>
 
   <div style="text-align: center;">
-    <a href="index.html" class="boton-inicio">Regresar al inicio</a>
+    <a href="nosotros.html" class="boton-inicio">Regresar al inicio</a>
   </div>
 
   <footer class="main-footer">
-    <p>&copy; 2025 COFFE WHISPER. Todos los derechos reservados.</p>
-  </footer>
+  <div class="footer-content">
+    <div class="footer-logo">Coffee <span class="shimmer">Whisper</span></div>
+    <p class="footer-text">Hecho con ☕ y amor </p>
+    <p class="footer-copy">&copy; <?= date('Y') ?> Coffee Whisper by JSL. Todos los derechos reservados.</p>
+  </div>
+</footer>
 
 </body>
 </html>
